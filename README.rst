@@ -2,11 +2,11 @@ ExecTree
 ========
 It is common enough that a recursive function is used to traverse something while a k-ary tree is built and returned by this same function.
 
-Since this tree is implicit from the execution, I feel there should be a way to obtain a basic tree that would represent the recorded history of the stack
+Since this tree is implicit from the execution, I feel there should be a way to obtain a basic tree that would represent the recorded history of the stack.
 
 Decoupling the function design and the data structure creation will hopefully allow the programmer to focus on the recursive logic.
 
-In python this is achieved using a decorator ``@exectree``. Optionally, it is possible to specify which arguments to record by passing there indices to exectree.
+In python this is achieved using a decorator ``@exectree``. Optionally, it is possible to specify which arguments to record by passing their indices to exectree.
 
 Example
 -------
@@ -39,6 +39,6 @@ A recursive function used to traverse a 2d map::
 
 Usage tips
 ----------
-If a value is computed inside the function frame and needs to be present in the tree, it simply has to be returned
+If a value is computed inside the function frame and needs to be present in the tree, it simply has to be returned.
 
 e.g. if the function used to return a boolean, it could now return a tuple (Boolean,Other)

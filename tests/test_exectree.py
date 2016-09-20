@@ -68,7 +68,7 @@ class ExectreeTestSuite(unittest.TestCase):
           # rightward
           self.tv.nodes[8+2*i] = ExecTree(args=[35+i],ret=None)
         # intersection: the rightward path is taken first 
-        # walk rightward trice
+        # walk rightward thrice
         for i in range(3):
           self.tv.nodes[17+2*i] = ExecTree(args=[38+i],ret=False)
           self.tv.nodes[18+2*i] = ExecTree(args=[40+i],ret=None)
@@ -86,7 +86,7 @@ class ExectreeTestSuite(unittest.TestCase):
         self.tv.nodes[33] = ExecTree(args=[39],ret=False)
         # upward
         self.tv.nodes[34] = ExecTree(args=[17],ret=None)
-        # walk leftward trice
+        # walk leftward thrice
         for i in range(3):
           self.tv.nodes[35+i] = ExecTree(args=[16-i],ret=None)
         # walls
